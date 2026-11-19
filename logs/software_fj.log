@@ -1,0 +1,228 @@
+2026-11-19 08:31:21,380 | INFO     | Inicio en modo consola.
+2026-11-19 08:31:21,381 | INFO     | Cliente registrado: Cliente #1: Ana María Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 08:31:21,381 | INFO     | Operación 1 finalizada.
+2026-11-19 08:31:21,381 | ERROR    | Operación 2 (Registro inválido: correo mal formado): Correo inválido: 'luis-correo.com'.
+2026-11-19 08:31:21,381 | INFO     | Operación 2 finalizada.
+2026-11-19 08:31:21,381 | INFO     | Cliente registrado: Cliente #2: Luis Pérez | Doc: 1098765432 | luis@correo.com
+2026-11-19 08:31:21,382 | INFO     | Operación 3 finalizada.
+2026-11-19 08:31:21,382 | ERROR    | Operación 4 (Registro inválido: documento con letras): Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 08:31:21,382 | INFO     | Operación 4 finalizada.
+2026-11-19 08:31:21,382 | ERROR    | Operación 5 (Registro inválido: documento repetido): Ya existe un cliente con el documento 1082345678.
+2026-11-19 08:31:21,382 | INFO     | Operación 5 finalizada.
+2026-11-19 08:31:21,382 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 08:31:21,383 | INFO     | Operación 6 finalizada.
+2026-11-19 08:31:21,383 | ERROR    | Operación 7 (Creación inválida: tarifa negativa): Tarifa inválida: -20000.
+2026-11-19 08:31:21,383 | INFO     | Operación 7 finalizada.
+2026-11-19 08:31:21,383 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector HD | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 08:31:21,383 | INFO     | Operación 8 finalizada.
+2026-11-19 08:31:21,383 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 08:31:21,383 | INFO     | Operación 9 finalizada.
+2026-11-19 08:31:21,383 | INFO     | Reserva creada: Reserva #1: Ana María Ruiz -> Sala Ejecutiva | 19/11/2026 08:31 (2 h) | PENDIENTE | Total: por calcular
+2026-11-19 08:31:21,383 | INFO     | Operación 10 finalizada.
+2026-11-19 08:31:21,384 | ERROR    | Operación 11 (Reserva fallida: 25 personas exceden la capacidad (error encadenado)): Parámetros rechazados por 'Sala Ejecutiva'. | Causa: 25 personas exceden la capacidad (10).
+2026-11-19 08:31:21,384 | INFO     | Operación 11 finalizada.
+2026-11-19 08:31:21,384 | ERROR    | Operación 12 (Reserva fallida: falta el parámetro 'cantidad'): Parámetros rechazados por 'Proyector HD'. | Causa: Falta el parámetro 'cantidad'.
+2026-11-19 08:31:21,384 | INFO     | Operación 12 finalizada.
+2026-11-19 08:31:21,384 | INFO     | Reserva creada: Reserva #2: Luis Pérez -> Asesoría Cloud | 19/11/2026 08:31 (3 h) | PENDIENTE | Total: por calcular
+2026-11-19 08:31:21,384 | INFO     | Operación 13 finalizada.
+2026-11-19 08:31:21,384 | ERROR    | Operación 14 (Reserva fallida: la sala ya está ocupada en ese horario): 'Sala Ejecutiva' no tiene cupo entre 19/11 08:31 y 19/11 09:31.
+2026-11-19 08:31:21,384 | INFO     | Operación 14 finalizada.
+2026-11-19 08:31:21,384 | ERROR    | Operación 15 (Reserva fallida: 5 unidades superan el inventario de 3): Parámetros rechazados por 'Proyector HD'. | Causa: Se piden 5 unidades y el inventario es de 3.
+2026-11-19 08:31:21,384 | INFO     | Operación 15 finalizada.
+2026-11-19 08:31:21,384 | INFO     | Reserva #1 confirmada.
+2026-11-19 08:31:21,384 | INFO     | Reserva #1 procesada. Total: $119,000.00.
+2026-11-19 08:31:21,384 | INFO     | Fin del intento de procesamiento de la reserva #1.
+2026-11-19 08:31:21,384 | INFO     | Operación 16 finalizada.
+2026-11-19 08:31:21,385 | INFO     | Fin del intento de procesamiento de la reserva #2.
+2026-11-19 08:31:21,385 | ERROR    | Operación 17 (Procesar asesoría SIN confirmar (operación no permitida)): No se pudo procesar la reserva #2. | Causa: Reserva #2 en estado PENDIENTE; debe estar CONFIRMADA.
+2026-11-19 08:31:21,385 | INFO     | Operación 17 finalizada.
+2026-11-19 08:31:21,385 | INFO     | Reserva #2 confirmada.
+2026-11-19 08:31:21,385 | INFO     | Reserva #2 procesada. Total: $375,921.00.
+2026-11-19 08:31:21,385 | INFO     | Fin del intento de procesamiento de la reserva #2.
+2026-11-19 08:31:21,386 | INFO     | Operación 18 finalizada.
+2026-11-19 08:31:21,386 | ERROR    | Operación 19 (Cancelar una reserva ya procesada (no permitido)): No se puede cancelar una reserva PROCESADA.
+2026-11-19 08:31:21,386 | INFO     | Operación 19 finalizada.
+2026-11-19 08:31:21,386 | ERROR    | Operación 20 (Cálculo inconsistente: descuento del 150 %): Descuento (1.5) o impuesto (0.19) fuera de rango.
+2026-11-19 08:31:21,386 | INFO     | Operación 20 finalizada.
+2026-11-19 08:31:21,386 | INFO     | Disponibilidad cambiada: [Equipo] Servicio #2: Proyector HD | $15,000/h | No disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 08:31:21,386 | ERROR    | Operación 21 (Reservar un servicio no disponible): 'Proyector HD' no está disponible.
+2026-11-19 08:31:21,386 | INFO     | Operación 21 finalizada.
+2026-11-19 08:31:21,387 | ERROR    | Operación 22 (Dato de tipo incorrecto (duración como texto)): Duración inválida: 'dos'.
+2026-11-19 08:31:21,387 | INFO     | Operación 22 finalizada.
+2026-11-19 08:54:10,867 | INFO     | Inicio en modo consola.
+2026-11-19 08:54:10,869 | INFO     | Cliente registrado: Cliente #1: Ana María Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 08:54:10,869 | INFO     | Operación 1 finalizada.
+2026-11-19 08:54:10,870 | ERROR    | Operación 2 (Registro inválido: correo mal formado): Correo inválido: 'luis-correo.com'.
+2026-11-19 08:54:10,870 | INFO     | Operación 2 finalizada.
+2026-11-19 08:54:10,870 | INFO     | Cliente registrado: Cliente #2: Luis Pérez | Doc: 1098765432 | luis@correo.com
+2026-11-19 08:54:10,870 | INFO     | Operación 3 finalizada.
+2026-11-19 08:54:10,871 | ERROR    | Operación 4 (Registro inválido: documento con letras): Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 08:54:10,871 | INFO     | Operación 4 finalizada.
+2026-11-19 08:54:10,871 | ERROR    | Operación 5 (Registro inválido: documento repetido): Ya existe un cliente con el documento 1082345678.
+2026-11-19 08:54:10,871 | INFO     | Operación 5 finalizada.
+2026-11-19 08:54:10,871 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 08:54:10,871 | INFO     | Operación 6 finalizada.
+2026-11-19 08:54:10,871 | ERROR    | Operación 7 (Creación inválida: tarifa negativa): Tarifa inválida: -20000.
+2026-11-19 08:54:10,871 | INFO     | Operación 7 finalizada.
+2026-11-19 08:54:10,871 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector HD | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 08:54:10,871 | INFO     | Operación 8 finalizada.
+2026-11-19 08:54:10,872 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 08:54:10,872 | INFO     | Operación 9 finalizada.
+2026-11-19 08:54:10,872 | INFO     | Reserva creada: Reserva #1: Ana María Ruiz -> Sala Ejecutiva | 19/11/2026 08:54 (2 h) | PENDIENTE | Total: por calcular
+2026-11-19 08:54:10,872 | INFO     | Operación 10 finalizada.
+2026-11-19 08:54:10,872 | ERROR    | Operación 11 (Reserva fallida: 25 personas exceden la capacidad (error encadenado)): Parámetros rechazados por 'Sala Ejecutiva'. | Causa: 25 personas exceden la capacidad (10).
+2026-11-19 08:54:10,872 | INFO     | Operación 11 finalizada.
+2026-11-19 08:54:10,873 | ERROR    | Operación 12 (Reserva fallida: falta el parámetro 'cantidad'): Parámetros rechazados por 'Proyector HD'. | Causa: Falta el parámetro 'cantidad'.
+2026-11-19 08:54:10,873 | INFO     | Operación 12 finalizada.
+2026-11-19 08:54:10,873 | INFO     | Reserva creada: Reserva #2: Luis Pérez -> Asesoría Cloud | 19/11/2026 08:54 (3 h) | PENDIENTE | Total: por calcular
+2026-11-19 08:54:10,873 | INFO     | Operación 13 finalizada.
+2026-11-19 08:54:10,873 | ERROR    | Operación 14 (Reserva fallida: la sala ya está ocupada en ese horario): 'Sala Ejecutiva' no tiene cupo entre 19/11 08:54 y 19/11 09:54.
+2026-11-19 08:54:10,874 | INFO     | Operación 14 finalizada.
+2026-11-19 08:54:10,874 | ERROR    | Operación 15 (Reserva fallida: 5 unidades superan el inventario de 3): Parámetros rechazados por 'Proyector HD'. | Causa: Se piden 5 unidades y el inventario es de 3.
+2026-11-19 08:54:10,874 | INFO     | Operación 15 finalizada.
+2026-11-19 08:54:10,874 | INFO     | Reserva #1 confirmada.
+2026-11-19 08:54:10,874 | INFO     | Reserva #1 procesada. Total: $119,000.00.
+2026-11-19 08:54:10,875 | INFO     | Fin del intento de procesamiento de la reserva #1.
+2026-11-19 08:54:10,875 | INFO     | Operación 16 finalizada.
+2026-11-19 08:54:10,875 | INFO     | Fin del intento de procesamiento de la reserva #2.
+2026-11-19 08:54:10,875 | ERROR    | Operación 17 (Procesar asesoría SIN confirmar (operación no permitida)): No se pudo procesar la reserva #2. | Causa: Reserva #2 en estado PENDIENTE; debe estar CONFIRMADA.
+2026-11-19 08:54:10,875 | INFO     | Operación 17 finalizada.
+2026-11-19 08:54:10,875 | INFO     | Reserva #2 confirmada.
+2026-11-19 08:54:10,875 | INFO     | Reserva #2 procesada. Total: $375,921.00.
+2026-11-19 08:54:10,875 | INFO     | Fin del intento de procesamiento de la reserva #2.
+2026-11-19 08:54:10,875 | INFO     | Operación 18 finalizada.
+2026-11-19 08:54:10,875 | ERROR    | Operación 19 (Cancelar una reserva ya procesada (no permitido)): No se puede cancelar una reserva PROCESADA.
+2026-11-19 08:54:10,875 | INFO     | Operación 19 finalizada.
+2026-11-19 08:54:10,875 | ERROR    | Operación 20 (Cálculo inconsistente: descuento del 150 %): Descuento (1.5) o impuesto (0.19) fuera de rango.
+2026-11-19 08:54:10,875 | INFO     | Operación 20 finalizada.
+2026-11-19 08:54:10,876 | INFO     | Disponibilidad cambiada: [Equipo] Servicio #2: Proyector HD | $15,000/h | No disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 08:54:10,876 | ERROR    | Operación 21 (Reservar un servicio no disponible): 'Proyector HD' no está disponible.
+2026-11-19 08:54:10,876 | INFO     | Operación 21 finalizada.
+2026-11-19 08:54:10,877 | ERROR    | Operación 22 (Dato de tipo incorrecto (duración como texto)): Duración inválida: 'dos'.
+2026-11-19 08:54:10,878 | INFO     | Operación 22 finalizada.
+2026-11-19 09:13:21,846 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:21,850 | ERROR    | Gestor.registrar_cliente: Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 09:13:21,851 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:21,851 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 09:13:21,851 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:21,852 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 09:13:21,852 | ERROR    | Gestor.crear_reserva: Duración inválida: 'dos'.
+2026-11-19 09:13:21,852 | ERROR    | Gestor.crear_reserva: Descuento inválido: nan (entre 0 % y 99 %).
+2026-11-19 09:13:21,852 | ERROR    | Gestor.actualizar_cliente: Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 09:13:21,854 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:21,854 | ERROR    | Gestor.registrar_cliente: Ya existe un cliente con el documento 1082345678.
+2026-11-19 09:13:21,854 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:21,855 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 09:13:21,855 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:21,855 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 09:13:21,867 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Sala Ejecutiva'. | Causa: Falta el parámetro 'personas'.
+2026-11-19 09:13:21,867 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Sala Ejecutiva'. | Causa: 25 personas exceden la capacidad (10).
+2026-11-19 09:13:21,867 | ERROR    | Gestor.crear_reserva: Descuento inválido: 1.5 (entre 0 % y 99 %).
+2026-11-19 09:13:21,868 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:21,869 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 09:13:21,873 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:21,873 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 09:13:21,874 | INFO     | Disponibilidad cambiada: [Equipo] Servicio #2: Proyector | $15,000/h | No disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:21,874 | ERROR    | Gestor.crear_reserva: 'Proyector' no está disponible.
+2026-11-19 09:13:21,874 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:21,874 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 09:13:21,875 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:21,875 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 09:13:21,875 | INFO     | Reserva creada: Reserva #1: Ana Ruiz -> Sala Ejecutiva | 19/11/2026 10:13 (2 h) | PENDIENTE | Total: por calcular
+2026-11-19 09:13:21,875 | INFO     | Reserva #1 confirmada.
+2026-11-19 09:13:21,876 | INFO     | Reserva #1 procesada. Total: $119,000.00.
+2026-11-19 09:13:21,876 | INFO     | Fin del intento de procesamiento de la reserva #1.
+2026-11-19 09:13:21,876 | ERROR    | Gestor.crear_reserva: 'Sala Ejecutiva' no tiene cupo entre 19/11 10:13 y 19/11 11:13.
+2026-11-19 09:13:22,415 | INFO     | Inicio en modo consola.
+2026-11-19 09:13:22,416 | INFO     | Cliente registrado: Cliente #1: Ana María Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 09:13:22,416 | INFO     | Operación 1 finalizada.
+2026-11-19 09:13:22,417 | ERROR    | Gestor.registrar_cliente: Correo inválido: 'luis-correo.com'.
+2026-11-19 09:13:22,417 | ERROR    | Operación 2 (Registro inválido: correo mal formado): Correo inválido: 'luis-correo.com'.
+2026-11-19 09:13:22,417 | INFO     | Operación 2 finalizada.
+2026-11-19 09:13:22,417 | INFO     | Cliente registrado: Cliente #2: Luis Pérez | Doc: 1098765432 | luis@correo.com
+2026-11-19 09:13:22,417 | INFO     | Operación 3 finalizada.
+2026-11-19 09:13:22,417 | ERROR    | Gestor.registrar_cliente: Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 09:13:22,418 | ERROR    | Operación 4 (Registro inválido: documento con letras): Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 09:13:22,419 | INFO     | Operación 4 finalizada.
+2026-11-19 09:13:22,420 | ERROR    | Gestor.registrar_cliente: Ya existe un cliente con el documento 1082345678.
+2026-11-19 09:13:22,420 | ERROR    | Operación 5 (Registro inválido: documento repetido): Ya existe un cliente con el documento 1082345678.
+2026-11-19 09:13:22,420 | INFO     | Operación 5 finalizada.
+2026-11-19 09:13:22,420 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 09:13:22,420 | INFO     | Operación 6 finalizada.
+2026-11-19 09:13:22,420 | ERROR    | Operación 7 (Creación inválida: tarifa negativa): Tarifa inválida: -20000.
+2026-11-19 09:13:22,420 | INFO     | Operación 7 finalizada.
+2026-11-19 09:13:22,420 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector HD | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:22,421 | INFO     | Operación 8 finalizada.
+2026-11-19 09:13:22,421 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 09:13:22,421 | INFO     | Operación 9 finalizada.
+2026-11-19 09:13:22,422 | INFO     | Reserva creada: Reserva #1: Ana María Ruiz -> Sala Ejecutiva | 19/11/2026 09:13 (2 h) | PENDIENTE | Total: por calcular
+2026-11-19 09:13:22,422 | INFO     | Operación 10 finalizada.
+2026-11-19 09:13:22,422 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Sala Ejecutiva'. | Causa: 25 personas exceden la capacidad (10).
+2026-11-19 09:13:22,422 | ERROR    | Operación 11 (Reserva fallida: 25 personas exceden la capacidad (error encadenado)): Parámetros rechazados por 'Sala Ejecutiva'. | Causa: 25 personas exceden la capacidad (10).
+2026-11-19 09:13:22,422 | INFO     | Operación 11 finalizada.
+2026-11-19 09:13:22,422 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Proyector HD'. | Causa: Falta el parámetro 'cantidad'.
+2026-11-19 09:13:22,422 | ERROR    | Operación 12 (Reserva fallida: falta el parámetro 'cantidad'): Parámetros rechazados por 'Proyector HD'. | Causa: Falta el parámetro 'cantidad'.
+2026-11-19 09:13:22,422 | INFO     | Operación 12 finalizada.
+2026-11-19 09:13:22,422 | INFO     | Reserva creada: Reserva #2: Luis Pérez -> Asesoría Cloud | 19/11/2026 09:13 (3 h) | PENDIENTE | Total: por calcular
+2026-11-19 09:13:22,423 | INFO     | Operación 13 finalizada.
+2026-11-19 09:13:22,423 | ERROR    | Gestor.crear_reserva: 'Sala Ejecutiva' no tiene cupo entre 19/11 09:13 y 19/11 10:13.
+2026-11-19 09:13:22,423 | ERROR    | Operación 14 (Reserva fallida: la sala ya está ocupada en ese horario): 'Sala Ejecutiva' no tiene cupo entre 19/11 09:13 y 19/11 10:13.
+2026-11-19 09:13:22,423 | INFO     | Operación 14 finalizada.
+2026-11-19 09:13:22,423 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Proyector HD'. | Causa: Se piden 5 unidades y el inventario es de 3.
+2026-11-19 09:13:22,423 | ERROR    | Operación 15 (Reserva fallida: 5 unidades superan el inventario de 3): Parámetros rechazados por 'Proyector HD'. | Causa: Se piden 5 unidades y el inventario es de 3.
+2026-11-19 09:13:22,423 | INFO     | Operación 15 finalizada.
+2026-11-19 09:13:22,423 | INFO     | Reserva #1 confirmada.
+2026-11-19 09:13:22,423 | INFO     | Reserva #1 procesada. Total: $119,000.00.
+2026-11-19 09:13:22,423 | INFO     | Fin del intento de procesamiento de la reserva #1.
+2026-11-19 09:13:22,424 | INFO     | Operación 16 finalizada.
+2026-11-19 09:13:22,424 | INFO     | Fin del intento de procesamiento de la reserva #2.
+2026-11-19 09:13:22,424 | ERROR    | Operación 17 (Procesar asesoría SIN confirmar (operación no permitida)): No se pudo procesar la reserva #2. | Causa: Reserva #2 en estado PENDIENTE; debe estar CONFIRMADA.
+2026-11-19 09:13:22,424 | INFO     | Operación 17 finalizada.
+2026-11-19 09:13:22,424 | INFO     | Reserva #2 confirmada.
+2026-11-19 09:13:22,424 | INFO     | Reserva #2 procesada. Total: $375,921.00.
+2026-11-19 09:13:22,424 | INFO     | Fin del intento de procesamiento de la reserva #2.
+2026-11-19 09:13:22,424 | INFO     | Operación 18 finalizada.
+2026-11-19 09:13:22,424 | ERROR    | Operación 19 (Cancelar una reserva ya procesada (no permitido)): No se puede cancelar una reserva PROCESADA.
+2026-11-19 09:13:22,425 | INFO     | Operación 19 finalizada.
+2026-11-19 09:13:22,425 | ERROR    | Operación 20 (Cálculo inconsistente: descuento del 150 %): Descuento (1.5) o impuesto (0.19) fuera de rango.
+2026-11-19 09:13:22,425 | INFO     | Operación 20 finalizada.
+2026-11-19 09:13:22,425 | INFO     | Disponibilidad cambiada: [Equipo] Servicio #2: Proyector HD | $15,000/h | No disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 09:13:22,425 | ERROR    | Gestor.crear_reserva: 'Proyector HD' no está disponible.
+2026-11-19 09:13:22,425 | ERROR    | Operación 21 (Reservar un servicio no disponible): 'Proyector HD' no está disponible.
+2026-11-19 09:13:22,425 | INFO     | Operación 21 finalizada.
+2026-11-19 09:13:22,426 | ERROR    | Gestor.crear_reserva: Duración inválida: 'dos'.
+2026-11-19 09:13:22,426 | ERROR    | Operación 22 (Dato de tipo incorrecto (duración como texto)): Duración inválida: 'dos'.
+2026-11-19 09:13:22,426 | INFO     | Operación 22 finalizada.
+2026-11-19 10:27:47,166 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 10:27:47,167 | ERROR    | Gestor.registrar_cliente: Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 10:27:47,168 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 10:27:47,170 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 10:27:47,170 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 10:27:47,171 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 10:27:47,171 | ERROR    | Gestor.crear_reserva: Duración inválida: 'dos'.
+2026-11-19 10:27:47,171 | ERROR    | Gestor.crear_reserva: Descuento inválido: nan (entre 0 % y 99 %).
+2026-11-19 10:27:47,171 | ERROR    | Gestor.actualizar_cliente: Documento inválido: '12AB56' (6 a 12 dígitos).
+2026-11-19 10:27:47,172 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 10:27:47,172 | ERROR    | Gestor.registrar_cliente: Ya existe un cliente con el documento 1082345678.
+2026-11-19 10:27:47,172 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 10:27:47,173 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 10:27:47,173 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 10:27:47,173 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 10:27:47,173 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Sala Ejecutiva'. | Causa: Falta el parámetro 'personas'.
+2026-11-19 10:27:47,173 | ERROR    | Gestor.crear_reserva: Parámetros rechazados por 'Sala Ejecutiva'. | Causa: 25 personas exceden la capacidad (10).
+2026-11-19 10:27:47,173 | ERROR    | Gestor.crear_reserva: Descuento inválido: 1.5 (entre 0 % y 99 %).
+2026-11-19 10:27:47,174 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 10:27:47,175 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 10:27:47,175 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 10:27:47,175 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 10:27:47,175 | INFO     | Disponibilidad cambiada: [Equipo] Servicio #2: Proyector | $15,000/h | No disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 10:27:47,175 | ERROR    | Gestor.crear_reserva: 'Proyector' no está disponible.
+2026-11-19 10:27:47,175 | INFO     | Cliente registrado: Cliente #1: Ana Ruiz | Doc: 1082345678 | ana@correo.com
+2026-11-19 10:27:47,176 | INFO     | Servicio creado: [Sala] Servicio #1: Sala Ejecutiva | $50,000/h | Disponible | Capacidad: 10 personas
+2026-11-19 10:27:47,176 | INFO     | Servicio creado: [Equipo] Servicio #2: Proyector | $15,000/h | Disponible | Tipo: Proyector | Inventario: 3 unid.
+2026-11-19 10:27:47,176 | INFO     | Servicio creado: [Asesoría] Servicio #3: Asesoría Cloud | $90,000/h | Disponible | Especialidad: Cloud
+2026-11-19 10:27:47,176 | INFO     | Reserva creada: Reserva #1: Ana Ruiz -> Sala Ejecutiva | 19/11/2026 11:27 (2 h) | PENDIENTE | Total: por calcular
+2026-11-19 10:27:47,176 | INFO     | Reserva #1 confirmada.
+2026-11-19 10:27:47,176 | INFO     | Reserva #1 procesada. Total: $119,000.00.
+2026-11-19 10:27:47,176 | INFO     | Fin del intento de procesamiento de la reserva #1.
+2026-11-19 10:27:47,177 | ERROR    | Gestor.crear_reserva: 'Sala Ejecutiva' no tiene cupo entre 19/11 11:27 y 19/11 12:27.
